@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14DC60CE-D2B1-4EB1-951A-4140642B8DCE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>freelancemuthoot</RootNamespace>
+    <AssemblyName>freelancemuthoot</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44309</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\common.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\fonts\montserrat-v15-latin-regular.svg" />
+    <Content Include="css\fonts\OFL.txt" />
+    <Content Include="css\fonts\PoppinsLight.svg" />
+    <Content Include="css\header-animation.css" />
+    <Content Include="css\mystyle.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slick-theme.css" />
+    <Content Include="css\slick.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\Gallery\1-10_49900283576_o20201229044019158.jpg" />
+    <Content Include="images\Gallery\1-10_49900308886_o20201229044919612.jpg" />
+    <Content Include="images\Gallery\1-11_49899775243_o20201229041122018.jpg" />
+    <Content Include="images\Gallery\1-11_49899781033_o20201229041859829.jpg" />
+    <Content Include="images\Gallery\1-11_49900283546_o20201229044019158.jpg" />
+    <Content Include="images\Gallery\1-11_49900614837_o20201229044919612.jpg" />
+    <Content Include="images\Gallery\1-12_49900589352_o20201229044019174.jpg" />
+    <Content Include="images\Gallery\1-13_49899768903_o20201229035357988.jpg" />
+    <Content Include="images\Gallery\1-14_49899780968_o20201229041859845.jpg" />
+    <Content Include="images\Gallery\1-15_49899780953_o20201229041859891.jpg" />
+    <Content Include="images\Gallery\1-15_49900294201_o20201229041122018.jpg" />
+    <Content Include="images\Gallery\1-16_49900593587_o20201229035357988.jpg" />
+    <Content Include="images\Gallery\1-16_49900600062_o20201229041122033.jpg" />
+    <Content Include="images\Gallery\1-17_49900288026_o20201229035358003.jpg" />
+    <Content Include="images\Gallery\1-17_49900600047_o20201229041122049.jpg" />
+    <Content Include="images\Gallery\1-18_49900593547_o20201229035358019.jpg" />
+    <Content Include="images\Gallery\1-19_49900287996_o20201229035358019.jpg" />
+    <Content Include="images\Gallery\1-19_49900294111_o20201229041122049.jpg" />
+    <Content Include="images\Gallery\1-20_49900287966_o20201229035358035.jpg" />
+    <Content Include="images\Gallery\1-21_49899780798_o20201229041859891.jpg" />
+    <Content Include="images\Gallery\1-21_49900287941_o20201229035358050.jpg" />
+    <Content Include="images\Gallery\1-2_49899769223_o20201229035357957.jpg" />
+    <Content Include="images\Gallery\1-2_49899775483_o20201229041121986.jpg" />
+    <Content Include="images\Gallery\1-3_49900615012_o20201229044919549.jpg" />
+    <Content Include="images\Gallery\1-4_49899764558_o20201229044019095.jpg" />
+    <Content Include="images\Gallery\1-4_49900294366_o20201229041121986.jpg" />
+    <Content Include="images\Gallery\1-4_49900605987_o20201229041859782.jpg" />
+    <Content Include="images\Gallery\1-5_49899764548_o20201229044019111.jpg" />
+    <Content Include="images\Gallery\1-5_49899790368_o20201229044919565.jpg" />
+    <Content Include="images\Gallery\1-5_49900600372_o20201229041122002.jpg" />
+    <Content Include="images\Gallery\1-5_49900605967_o20201229041859813.jpg" />
+    <Content Include="images\Gallery\1-6_49900589492_o20201229044019127.jpg" />
+    <Content Include="images\Gallery\1-7_49900308971_o20201229044919565.jpg" />
+    <Content Include="images\Gallery\1-8_49899769078_o20201229035357972.jpg" />
+    <Content Include="images\Gallery\1-8_49899790328_o20201229044919580.jpg" />
+    <Content Include="images\Gallery\1-8_49900589412_o20201229044019127.jpg" />
+    <Content Include="images\Gallery\1-9_49899764428_o20201229044019142.jpg" />
+    <Content Include="images\Gallery\1-9_49899790308_o20201229044919596.jpg" />
+    <Content Include="images\Gallery\1-9_49900605847_o20201229041859813.jpg" />
+    <Content Include="images\Gallery\13 - Copy20201218170655730.jfif" />
+    <Content Include="images\Gallery\1320201226151616476.jfif" />
+    <Content Include="images\Gallery\1420201226151616659.jfif" />
+    <Content Include="images\Gallery\1520201227151132438.jfif" />
+    <Content Include="images\Gallery\1720201227151132477.jfif" />
+    <Content Include="images\Gallery\18 - Copy20201218170655773.jfif" />
+    <Content Include="images\Gallery\19 - Copy20201218170655692.jfif" />
+    <Content Include="images\Gallery\1920201218171355712.jfif" />
+    <Content Include="images\Gallery\1__10__49899678358_o20201228211239345.jpg" />
+    <Content Include="images\Gallery\1__10__49899697003_o20201228205709360.jpg" />
+    <Content Include="images\Gallery\1__11__49900216256_o20201228205709376.jpg" />
+    <Content Include="images\Gallery\1__12__49899696973_o20201228205709392.jpg" />
+    <Content Include="images\Gallery\1__12__49900228001_o20201228214315001.jpg" />
+    <Content Include="images\Gallery\1__12__49900503167_o20201228211239345.jpg" />
+    <Content Include="images\Gallery\1__13__49899678278_o20201228211239360.jpg" />
+    <Content Include="images\Gallery\1__13__49900216171_o20201228205709392.jpg" />
+    <Content Include="images\Gallery\1__15__49899678168_o20201228211239376.jpg" />
+    <Content Include="images\Gallery\1__16__49897557587_o20201229023850610.jpg" />
+    <Content Include="images\Gallery\1__16__49897557587_o20201229023854063.jpg" />
+    <Content Include="images\Gallery\1__16__49900196606_o20201228211239376.jpg" />
+    <Content Include="images\Gallery\1__16__49900521802_o20201228205709407.jpg" />
+    <Content Include="images\Gallery\1__17__49900502967_o20201228211239391.jpg" />
+    <Content Include="images\Gallery\1__17__49900521782_o20201228205709407.jpg" />
+    <Content Include="images\Gallery\1__18__49900196531_o20201228211239407.jpg" />
+    <Content Include="images\Gallery\1__18__49900216041_o20201228205709423.jpg" />
+    <Content Include="images\Gallery\1__19__49900196541_o20201228211239407.jpg" />
+    <Content Include="images\Gallery\1__1__49900503567_o20201228211239298.jpg" />
+    <Content Include="images\Gallery\1__20__49899708573_o20201228214315079.jpg" />
+    <Content Include="images\Gallery\1__20__49900196516_o20201228211239423.jpg" />
+    <Content Include="images\Gallery\1__2__49896729763_o20201229023850532.jpg" />
+    <Content Include="images\Gallery\1__2__49896729763_o20201229023853985.jpg" />
+    <Content Include="images\Gallery\1__2__49899678603_o20201228211239298.jpg" />
+    <Content Include="images\Gallery\1__2__49899708933_o20201228214314954.jpg" />
+    <Content Include="images\Gallery\1__3__49896729748_o20201229023850548.jpg" />
+    <Content Include="images\Gallery\1__3__49896729748_o20201229023854001.jpg" />
+    <Content Include="images\Gallery\1__3__49900216316_o20201228205709313.jpg" />
+    <Content Include="images\Gallery\1__3__49900228166_o20201228214314954.jpg" />
+    <Content Include="images\Gallery\1__4__49897557952_o20201229023850548.jpg" />
+    <Content Include="images\Gallery\1__4__49897557952_o20201229023854001.jpg" />
+    <Content Include="images\Gallery\1__4__49899697128_o20201228205709329.jpg" />
+    <Content Include="images\Gallery\1__5__49897557912_o20201229023850563.jpg" />
+    <Content Include="images\Gallery\1__5__49897557912_o20201229023854016.jpg" />
+    <Content Include="images\Gallery\1__5__49900216306_o20201228205709345.jpg" />
+    <Content Include="images\Gallery\1__6__49897557867_o20201229023850563.jpg" />
+    <Content Include="images\Gallery\1__6__49897557867_o20201229023854016.jpg" />
+    <Content Include="images\Gallery\1__6__49900196951_o20201228211239313.jpg" />
+    <Content Include="images\Gallery\1__7__49896729633_o20201229023850579.jpg" />
+    <Content Include="images\Gallery\1__7__49896729633_o20201229023854032.jpg" />
+    <Content Include="images\Gallery\1__7__49900228111_o20201228214314970.jpg" />
+    <Content Include="images\Gallery\1__7__49900503337_o20201228211239329.jpg" />
+    <Content Include="images\Gallery\1__8__49897247036_o20201229023850595.jpg" />
+    <Content Include="images\Gallery\1__8__49897247036_o20201229023854048.jpg" />
+    <Content Include="images\Gallery\1__8__49900533887_o20201228214314986.jpg" />
+    <Content Include="images\Gallery\1__9__49896729603_o20201229023850595.jpg" />
+    <Content Include="images\Gallery\1__9__49896729603_o20201229023854048.jpg" />
+    <Content Include="images\Gallery\1__9__49899708848_o20201228214314986.jpg" />
+    <Content Include="images\Gallery\1__9__49900503272_o20201228211239329.jpg" />
+    <Content Include="images\Gallery\1__9__49900521912_o20201228205709360.jpg" />
+    <Content Include="images\Gallery\2020201218171355727.jfif" />
+    <Content Include="images\Gallery\2020Image20201228213623603.jpg" />
+    <Content Include="images\Gallery\22 - Copy20201218170557871.jfif" />
+    <Content Include="images\Gallery\22 - Copy20201227151132499.jfif" />
+    <Content Include="images\Gallery\220201218170527728.jfif" />
+    <Content Include="images\Gallery\2220201218171355803.jfif" />
+    <Content Include="images\Gallery\23 - Copy20201218170557830.jfif" />
+    <Content Include="images\Gallery\2420201218170617960.jfif" />
+    <Content Include="images\Gallery\2420201226213050458.jfif" />
+    <Content Include="images\Gallery\2520201218170617981.jfif" />
+    <Content Include="images\Gallery\2620201218170618009.jfif" />
+    <Content Include="images\Gallery\2720201218170618053.jfif" />
+    <Content Include="images\Gallery\2720201218170655607.jfif" />
+    <Content Include="images\Gallery\2720201218171355808.jfif" />
+    <Content Include="images\Gallery\2820201218170618076.jfif" />
+    <Content Include="images\Gallery\2820201218171355818.jfif" />
+    <Content Include="images\Gallery\3020201218170557801.jfif" />
+    <Content Include="images\Gallery\3120201218170557813.jfif" />
+    <Content Include="images\Gallery\320201218170527756.jfif" />
+    <Content Include="images\Gallery\3220201218170655638.jfif" />
+    <Content Include="images\Gallery\3320201218170655656.jfif" />
+    <Content Include="images\Gallery\3320201226213050537.jfif" />
+    <Content Include="images\Gallery\420201218170527772.jfif" />
+    <Content Include="images\Gallery\520201218170527820.jfif" />
+    <Content Include="images\Gallery\720201218170527832.jfif" />
+    <Content Include="images\Gallery\bike220201227145040050.jfif" />
+    <Content Include="images\Gallery\bike320201227145040172.jfif" />
+    <Content Include="images\Gallery\bike520201227151848290.jfif" />
+    <Content Include="images\Gallery\bike720201227151848309.jfif" />
+    <Content Include="images\Gallery\chassis_49899696828_o20201228205709423.jpg" />
+    <Content Include="images\Gallery\chassis_49900533592_o20201228214315095.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0172_49639375872_o20201229002045377.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0176_49639100136_o20201229002045393.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0177_49639100096_o20201229002045408.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0179_49639375762_o20201229002045408.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0180_49639375752_o20201229002045424.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0181_49638574983_o20201229002045440.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0184_49638574823_o20201229002045440.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0185_49639375632_o20201229002045455.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0186_49638574748_o20201229002045455.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0195_49639099811_o20201229002045471.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0196_49639375432_o20201229002045487.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0197_49639099776_o20201229002045502.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0198_49638574498_o20201229002045518.jpg" />
+    <Content Include="images\Gallery\img-20200302-wa0200_49639099676_o20201229002045533.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0022_1583233640638_49646531371_o20201229020004444.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0022_1583233640638_49646531371_o20201229020009397.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0023_49646814687_o20201229020004459.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0023_49646814687_o20201229020009413.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0024_1583233643580_49646814637_o20201229020004459.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0024_1583233643580_49646814637_o20201229020009428.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0025_1583233645035_49646002603_o20201229020004475.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0025_1583233645035_49646002603_o20201229020009444.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0026_1583233646498_49646531236_o20201229020004475.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0026_1583233646498_49646531236_o20201229020009444.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0027_1583233647961_49646002508_o20201229020004491.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0027_1583233647961_49646002508_o20201229020009459.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0029_1583233650876_49646531151_o20201229020004506.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0029_1583233650876_49646531151_o20201229020009491.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0030_1583233651588_49646002468_o20201229020004522.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0030_1583233651588_49646002468_o20201229020009491.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0031_1583233748608_49646531121_o20201229020004538.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0031_1583233748608_49646531121_o20201229020009506.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0033_1583233750669_49646814357_o20201229020004553.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0033_1583233750669_49646814357_o20201229020009522.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0034_1583233751688_49646814327_o20201229020004553.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0034_1583233751688_49646814327_o20201229020009538.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0035_1583233752652_49646531011_o20201229020004569.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0035_1583233752652_49646531011_o20201229020009553.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0036_1583233753666_49646530991_o20201229020004584.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0036_1583233753666_49646530991_o20201229020009569.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0037_1583233895048_49646002313_o20201229020004600.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0037_1583233895048_49646002313_o20201229020009584.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0039_1583235117915_49646507836_o20201228215729596.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0040_1583235197695_49646507791_o20201228215729612.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0041_1583235122080_49645979078_o20201228215729627.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0042_1583235122986_49645979063_o20201228215729627.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0044_1583235124907_49646790877_o20201228215729658.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0046_1583235185195_49646507711_o20201228215729674.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0047_1583235186413_49645978978_o20201228215729674.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0048_1583235189754_49646790842_o20201228215729690.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0049_1583235190863_49645978923_o20201228215729705.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0056_49654222316_o20201229004150645.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0059_49654222301_o20201229004150660.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0061_49654222286_o20201229004150676.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0065_49654222251_o20201229004150691.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0066_49654222176_o20201229004150691.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0067_49654222151_o20201229004150707.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0068_49653682488_o20201229004150723.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0069_49654222161_o20201229004150723.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0070_49654501987_o20201229004150738.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0071_49653682423_o20201229004150754.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0075_49654222091_o20201229004150754.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0076_49654222076_o20201229004150770.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0077_49653682383_o20201229004150785.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0078_49654222026_o20201229004150785.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0174_49646821242_o20201228232241283.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0179_49646008823_o20201228232241299.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0184_49646821172_o20201228232241299.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0185_49646008743_o20201228232241314.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0187_49646821142_o20201228232241330.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0188_49646537321_o20201228232241345.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0190_49646537311_o20201228232241361.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0191_49646537271_o20201228232241361.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0192_49646537241_o20201228232241377.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0193_49646820982_o20201228232241392.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0194_49646537191_o20201228232241408.jpg" />
+    <Content Include="images\Gallery\img-20200303-wa0196_49646008513_o20201228232241408.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0092_49638544928_o20201229024828547.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0093_49639345302_o20201229024828547.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0094_49638544823_o20201229024828563.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0095_49639069346_o20201229024828579.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0096_49638544828_o20201229024828579.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0097_49638544758_o20201229024828594.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0099_49638544708_o20201229024828610.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0102_49639345117_o20201229024828610.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0103_49639069191_o20201229024828626.jpg" />
+    <Content Include="images\Gallery\img-20200306-wa0104_49639345052_o20201229024828641.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0012_49899828313_o20201229045508254.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0014_49900653347_o20201229045508270.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0016_49899828283_o20201229045508270.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0021_49900347556_o20201229045508286.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0023_49900658432_o20201229025933487.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0025_49900658352_o20201229025933503.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0027_49900352666_o20201229025933503.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0028_49899814853_o20201229050320318.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0031_49900640142_o20201229050320334.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0032_49900640127_o20201229050320349.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0049_49899814728_o20201229050320349.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0052_49900639982_o20201229050320365.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0054_49899814608_o20201229050320381.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0055_49899814553_o20201229050320396.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0057_49900639847_o20201229050320412.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0058_49900658252_o20201229025933519.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0061_49900658172_o20201229025933534.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0063_49900352496_o20201229025933534.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0064_49900352476_o20201229025933550.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0065_49900658072_o20201229025933550.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0070_49899828033_o20201229045508301.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0073_49900347386_o20201229045508317.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0074_49900347376_o20201229045508332.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0075_49899827888_o20201229045508348.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0079_49900263916_o20201229032226503.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0080_49900569907_o20201229032226518.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0087_49900569777_o20201229032226534.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0089_49900263751_o20201229032226549.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0091_49900263731_o20201229032226549.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0092_49900569652_o20201229032226565.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0093_49899744413_o20201229032226581.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0096_49900263601_o20201229032226596.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0097_49899744353_o20201229032226596.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0099_49899744313_o20201229032226612.jpg" />
+    <Content Include="images\Gallery\img-20200320-wa0101_49900569492_o20201229032226612.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0018_49900338991_o20201229031454691.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0020_49900338906_o20201229031454691.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0022_49900644647_o20201229031454707.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0023_49900338826_o20201229031454723.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0024_49900338791_o20201229031454738.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0025_49900338786_o20201229031454754.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0026_49899819143_o20201229031454754.jpg" />
+    <Content Include="images\Gallery\img-20200321-wa0027_49900338746_o20201229031454769.jpg" />
+    <Content Include="images\Gallery\img-20200509-wa0000_49899804918_o20201229034527346.jpg" />
+    <Content Include="images\Gallery\img-20200509-wa0001_49900324236_o20201229034527362.jpg" />
+    <Content Include="images\Gallery\img-20200509-wa0007_49899804873_o20201229034527378.jpg" />
+    <Content Include="images\Gallery\img-20200511-wa0003_49900324156_o20201229034527393.jpg" />
+    <Content Include="images\Gallery\img-20200512-wa0028_49900630047_o20201229034527424.jpg" />
+    <Content Include="images\Gallery\img-20200512-wa0029_49900630037_o20201229034527440.jpg" />
+    <Content Include="images\Gallery\img_20200302_165528_49646545871_o20201228223339253.jpg" />
+    <Content Include="images\Gallery\img_20200302_165536_49646545856_o20201228223339268.jpg" />
+    <Content Include="images\Gallery\img_20200302_165616_49646545826_o20201228223339315.jpg" />
+    <Content Include="images\Gallery\img_20200302_165659_49646017003_o20201228223339315.jpg" />
+    <Content Include="images\Gallery\img_20200302_165706_49646545761_o20201228223339331.jpg" />
+    <Content Include="images\Gallery\img_20200302_165712_49646829322_o20201228223339346.jpg" />
+    <Content Include="images\Gallery\img_20200302_165718_49646545711_o20201228223339346.jpg" />
+    <Content Include="images\Gallery\img_20200302_165724_49646829267_o20201228223339362.jpg" />
+    <Content Include="images\Gallery\img_20200302_165731_49646016918_o20201228223339378.jpg" />
+    <Content Include="images\Gallery\img_20200302_165747_49646545636_o20201228223339378.jpg" />
+    <Content Include="images\Gallery\img_20200302_165835_49646545616_o20201228223339393.jpg" />
+    <Content Include="images\Gallery\img_20200302_165956_49646829197_o20201228223339409.jpg" />
+    <Content Include="images\Gallery\img_20200302_171209_49646016803_o20201228223339409.jpg" />
+    <Content Include="images\Gallery\img_20200302_180520_49639341082_o20201228221254096.jpg" />
+    <Content Include="images\Gallery\img_20200302_180520_49639341082_o20201228221258674.jpg" />
+    <Content Include="images\Gallery\img_20200302_180526_49639341042_o20201228221254112.jpg" />
+    <Content Include="images\Gallery\img_20200302_180526_49639341042_o20201228221258690.jpg" />
+    <Content Include="images\Gallery\img_20200302_180532_49639341007_o20201228221254127.jpg" />
+    <Content Include="images\Gallery\img_20200302_180532_49639341007_o20201228221258706.jpg" />
+    <Content Include="images\Gallery\img_20200302_180638_49638540758_o20201228221254127.jpg" />
+    <Content Include="images\Gallery\img_20200302_180638_49638540758_o20201228221258721.jpg" />
+    <Content Include="images\Gallery\img_20200302_180708_49639065031_o20201228221254159.jpg" />
+    <Content Include="images\Gallery\img_20200302_180708_49639065031_o20201228221258737.jpg" />
+    <Content Include="images\Gallery\img_20200302_180810_49639064986_o20201228221254174.jpg" />
+    <Content Include="images\Gallery\img_20200302_180810_49639064986_o20201228221258737.jpg" />
+    <Content Include="images\Gallery\img_20200302_180817_49639064961_o20201228221254190.jpg" />
+    <Content Include="images\Gallery\img_20200302_180817_49639064961_o20201228221258752.jpg" />
+    <Content Include="images\Vehicle\1-14_49899768878_o20201229035316566.jpg" />
+    <Content Include="images\Vehicle\1-14_49900294211_o20201229041051674.jpg" />
+    <Content Include="images\Vehicle\1-16_49900299696_o20201229041838611.jpg" />
+    <Content Include="images\Vehicle\1-6_49900589492_o20201229043932267.jpg" />
+    <Content Include="images\Vehicle\1-6_49900614937_o20201229044633050.jpg" />
+    <Content Include="images\Vehicle\120201218170016503.jfif" />
+    <Content Include="images\Vehicle\1220201224222919836.jfif" />
+    <Content Include="images\Vehicle\1420201218170344033.jfif" />
+    <Content Include="images\Vehicle\1420201227145944113.jfif" />
+    <Content Include="images\Vehicle\1620201226205403506.jfif" />
+    <Content Include="images\Vehicle\1__10__49900533857_o20201228214221345.jpg" />
+    <Content Include="images\Vehicle\1__10__49900533857_o20201228214520408.jpg" />
+    <Content Include="images\Vehicle\1__10__49900533857_o20201229025237313.jpg" />
+    <Content Include="images\Vehicle\1__11__49900196786_o20201228211048172.jpg" />
+    <Content Include="images\Vehicle\1__11__49900196786_o20201228222410504.jpg" />
+    <Content Include="images\Vehicle\1__15__49900216096_o20201228205611860.jpg" />
+    <Content Include="images\Vehicle\1__1__49896729783_o20201229023815735.jpg" />
+    <Content Include="images\Vehicle\1__9__49899708848_o20201228214059876.jpg" />
+    <Content Include="images\Vehicle\2020Image20201228213601569.jpg" />
+    <Content Include="images\Vehicle\23 - Copy20201218171302610.jfif" />
+    <Content Include="images\Vehicle\520201228214256107.jfif" />
+    <Content Include="images\Vehicle\720201218170119351.jfif" />
+    <Content Include="images\Vehicle\920201218170234054.jfif" />
+    <Content Include="images\Vehicle\bike120201227144751457.jfif" />
+    <Content Include="images\Vehicle\bike520201227145633093.jfif" />
+    <Content Include="images\Vehicle\bike820201227151308265.jfif" />
+    <Content Include="images\Vehicle\img-20200302-wa0196_49639375432_o20201229001940549.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0021_1583233638383_49646814702_o20201229015908787.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0038_1583235192983_49645979133_o20201228215635408.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0055_49653682608_o20201229004049535.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0172_49646821292_o20201228232157220.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0172_49646821292_o20201228232158705.jpg" />
+    <Content Include="images\Vehicle\img-20200303-wa0172_49646821292_o20201228232201127.jpg" />
+    <Content Include="images\Vehicle\img-20200306-wa0091_49639069441_o20201229024728532.jpg" />
+    <Content Include="images\Vehicle\img-20200320-wa0012_49899828313_o20201229045435895.jpg" />
+    <Content Include="images\Vehicle\img-20200320-wa0022_49899833318_o20201229025858737.jpg" />
+    <Content Include="images\Vehicle\img-20200320-wa0053_49900639932_o20201229050246600.jpg" />
+    <Content Include="images\Vehicle\img-20200320-wa0088_49900263776_o20201229032135362.jpg" />
+    <Content Include="images\Vehicle\img-20200321-wa0021_49900338901_o20201229031329675.jpg" />
+    <Content Include="images\Vehicle\img-20200509-wa0003_49900630147_o20201229033923612.jpg" />
+    <Content Include="images\Vehicle\img_20200302_165654_49646545791_o20201228223258143.jpg" />
+    <Content Include="images\Vehicle\img_20200302_180458_49639341087_o20201228221219143.jpg" />
+    <Content Include="images\Vehicle\img_20200302_180458_49639341087_o20201228222035847.jpg" />
+    <Content Include="images\Vehicle\img_20200302_180458_49639341087_o20201228222043269.jpg" />
+    <Content Include="img\car.jpg" />
+    <Content Include="img\car2.jpg" />
+    <Content Include="img\car3.jpg" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\pexels-arnie-watkins-3156482.jpg" />
+    <Content Include="img\sample-logo.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\fontawesome.js" />
+    <Content Include="js\InspectorImages.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery-3.2.1.slim.min.js" />
+    <Content Include="js\jquery-3.5.1.min.js" />
+    <Content Include="js\jquery-smoothscroll.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\myscript.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\slick.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="css\fonts\montserrat-v15-latin-regular.eot" />
+    <Content Include="css\fonts\montserrat-v15-latin-regular.ttf" />
+    <Content Include="css\fonts\montserrat-v15-latin-regular.woff" />
+    <Content Include="css\fonts\montserrat-v15-latin-regular.woff2" />
+    <Content Include="css\fonts\PoppinsLight.eot" />
+    <Content Include="css\fonts\PoppinsLight.ttf" />
+    <Content Include="css\fonts\PoppinsLight.woff" />
+    <Content Include="css\fonts\PoppinsLight.woff2" />
+    <Content Include="css\fonts\Raleway-Bold.ttf" />
+    <Content Include="css\fonts\Raleway-Light.ttf" />
+    <Content Include="css\fonts\Raleway-Regular.ttf" />
+    <Content Include="css\fonts\Raleway-SemiBold.ttf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Dashboard.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61937</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44309/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

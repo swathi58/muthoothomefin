@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<header class="main-nav">
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <a href="tel:123456789" class="top-call-icon">123456789</a>
+                    <a href="mailto:abc@gmail.com" class="top-mail-icon">mcare@muthoothomefin.in</a>
+                </div>
+
+                <div class="col-md-6 social-links-top col-sm-12 text-right">
+                    <span>Social links:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+            <a href="/">
+                <img src="~/img/logo.png" alt="img" class="logo-header" />
+            </a>
+            <nav class="right-side-nav d-none d-lg-block">
+                <ul class="menu-top-bar d-flex flex-column flex-lg-row align-items-lg-center p-0 m-0">
+
+                    <li>
+                        <a href="#" class="d-block">
+                            <div class="center">
+                                @Html.DropDownList("sname", (SelectList)ViewBag.stList, "State", new { id = "sid", @class = "form-control sources" })
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-block">
+
+
+                            <div class="center">
+                                @*@Html.DropDownList("cid", new SelectList(Enumerable.Empty<SelectListItem>(), "Model_Name", "Model_Name"), "Model", new { id = "ddlModel", @class = "form-control sources" })*@
+                                @Html.DropDownList("cid", (SelectList)ViewBag.ctyList, "City", new { id = "cid", @class = "form-control sources" })
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-block">
+                            <div class="center">
+                                @Html.DropDownList("tid", (SelectList)ViewBag.qtyList, "Qality Type", new { id = "tid", @class = "form-control sources" })
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="blog-page" id="divplaceholder">
+    <div class="contenedor text-center ml-5 mr-5">
+        <div class=" row text-center">
+            @for (int i = 1; i <= 8; i++)
+            {
+                var imgname = "/img/house" + i + ".jpg";
+                <div class="col-md-3">
+                    <div class="container_foto">
+                        <div class="ver_mas text-center knowmore">
+                            <span class="imd-desc">Know More...</span>
+                        </div>
+                        <div class="price-info">
+                            12000
+                        </div>
+                        @*  <div class="price-info">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> 21-06-2021<br />
+
+                            </div>*@
+                        @*<article class="imd-desc">
+
+                                <i class="fa fa-calendar" aria-hidden="true"></i> 21-06-2021<br />
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> Vizag
+                            </article>*@
+                        <img class="main-img" src=@imgname alt="">
+                    </div>
+                    <div class="img-desc">
+                        <span class="left-span"> <i class="fa fa-calendar" aria-hidden="true"></i> 21-06-2021</span>
+                        <span class="right-span">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Vizag
+                        </span>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mymodeltest" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document" id="addDialog">
+        <div class="modal-content" id="addContent">
+            <div class="modal-header" id="addHeader">
+                <h5 class="modal-title" id="exampleModalLabel">Request For House Details</h5>
+                <button id="addClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="addBody">
+                <div class="row" id="reqst-form">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Please Enter Name">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Please Enter Email">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Please Enter Email">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" placeholder="Please Enter Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row col-md-12">
+                        <div class="form-group col-md-8">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Please Enter Phone Number">
+                        </div>
+                        <div class="form-group col-md-4 send-otp-btn">
+                            <button class="btn btn-primary submitreqt" onclick="SendOtp()">Send OTP</button>
+
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row" id="verify-otp-form">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="motp" placeholder="Please Enter OTP">
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary submitreqt" id="verify-otp">Verify</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" id="addFooter">
+                <button type="button" id="submit-reqt" class="btn btn-primary submitreqt" onclick="viewHouseInfo()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

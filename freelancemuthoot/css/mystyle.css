@@ -1,0 +1,467 @@
+﻿
+
+body {
+    font-family: 'Raleway', sans-serif;
+   /* background-color: #8186a3;*/
+   background-color:#ffff !important;
+}
+
+.contenedor {
+    height: 100%;
+    padding: 2% 0;
+}
+
+h1 {
+    color: #FCFBFA;
+}
+
+.container_foto {
+   /* background-color: rgba(57, 62, 93, 0.7);*/
+    padding: 8px;
+    overflow: hidden;
+    max-width: 350px;
+    margin: 0px;
+}
+
+    .container_foto article {
+        padding: 10%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .container_foto h2 {
+        color: #fff;
+        font-weight: 800;
+        font-size: 25px;
+        border-bottom: #fff solid 1px;
+    }
+
+    .container_foto h4 {
+        font-weight: 300;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .container_foto img {
+        width: 100%;
+        top: 0;
+        left: 0;
+      /*  opacity: 0.4;*/
+        -webkit-transition: all 4s ease;
+        -moz-transition: all 4s ease;
+        -o-transition: all 4s ease;
+        -ms-transition: all 4s ease;
+        transition: all 4s ease;
+    }
+
+.ver_mas {
+    background-color: #c91a20;
+    position: absolute;
+/*    width: 100%;*/ 
+width:292px;    
+height:55px;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    margin-left:-8px !important;
+
+    transform: translate(0px, 70px);
+    -webkit-transform: translate(0px, 70px);
+    -moz-transform: translate(0px, 70px);
+    -o-transform: translate(0px, 70px);
+    -ms-transform: translate(0px, 70px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+    .ver_mas span {
+        font-size:18px;
+        color: #fff;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        top: 14px;
+    }
+
+
+/*hovers*/
+
+.container_foto:hover {
+    cursor: pointer;
+}
+
+    .container_foto:hover img {
+      /*  opacity: 0.5;*/
+        transform: scale(1.5);
+    }
+
+    .container_foto:hover article {
+        transform: translate(2px, -69px);
+        -webkit-transform: translate(2px, -69px);
+        -moz-transform: translate(2px, -69px);
+        -o-transform: translate(2px, -69px);
+        -ms-transform: translate(2px, -69px);
+    }
+
+    .container_foto:hover .ver_mas {
+        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        opacity: 1;
+    }
+        .container_foto:hover .price-info{
+            z-index:1;
+        }
+
+/*-------------------------------------------admin login style----------------------------------------------------*/
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+#formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+    color: #cccccc;
+}
+
+h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+        background-color: #39ace7;
+    }
+
+    input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+        -moz-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+input[type=text] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+    input[type=text]:focus {
+        background-color: #fff;
+        border-bottom: 2px solid #5fbae9;
+    }
+
+    input[type=text]:placeholder {
+        color: #cccccc;
+    }
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+    .fadeIn.first {
+        -webkit-animation-delay: 0.4s;
+        -moz-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    }
+
+    .fadeIn.second {
+        -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+
+    .fadeIn.third {
+        -webkit-animation-delay: 0.8s;
+        -moz-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+    }
+
+    .fadeIn.fourth {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+    .underlineHover:hover:after {
+        width: 100%;
+    }
+
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+}
+
+#icon {
+    width: 60%;
+}
+
+
+/*------------------------------------------my custom styles------------------------------------------------------*/
+        .eye-icon-sty {
+            padding: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+.img-desc {
+    /*    color: #0f0f0f;
+    font-family: "PoppinsLight";
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #808080*/
+    height: 50px;
+    border: 1px solid #808080;
+    margin-top: -9px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: "PoppinsLight";
+    font-size: 18px;
+    font-weight: bold;
+    padding:10px;
+}
+.submitreqt {
+    background-color: #b32b2f !important;
+    border: 1px solid #b32b2f !important;
+}
+    .submitreqt:hover {
+        background-color: #c91a20 !important;
+        border: 1px solid #c91a20 !important;
+    }
+
+.send-otp-btn {
+    margin-top: 28px !important;
+}
+ #submit-reqt {
+   width:100px;
+}
+#verify-otp {
+    width: 100px;
+    margin-left:-20px;
+}
+.main-img {
+    height: 200px !important;
+}
+
+.left-span {
+    display: block;
+    float: left;
+    width: 135px;
+    font-family: "PoppinsLight";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.right-span {
+    display: block;
+    float: right;
+    width: 100px;
+}
+.img-sub-title {
+    font-family: "PoppinsLight";
+    font-size: 16px;
+    font-weight: bold;
+}
+.img-sub-desc {
+    font-family: "PoppinsLight";
+    font-size: 14px;
+}
+.admin-login-btn {
+    width: 85% !important;
+    margin-top: 6px !important;
+    background-color: #b32b2f !important;
+    border: 1px solid #b32b2f !important;
+}
+.admin-login-form
+{
+    padding:30px;
+}
+.admin-login-btn:hover {
+    background-color: #c91a20 !important;
+    border: 1px solid #c91a20 !important;
+}

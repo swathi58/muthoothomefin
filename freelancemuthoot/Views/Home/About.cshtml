@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="blog-page slider" id="divimage">
+            <div id="slider-main-body">
+                <ul id="slider">
+                    @for (int i = 1; i <= 4; i++)
+                    {
+                        var imgname = "/img/house" + i + ".jpg";
+                        <li>
+                            <div> <img class="slider-img" src="@imgname" /></div>
+                        </li>
+
+                    }
+                </ul>
+                <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+                <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+                <div id="pagination-wrap">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="img-sub-title">Refernce ID : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc">123456789 </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-title">Property Address : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> 1-45, Madhurwada, Vizag </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="img-sub-title">Property Area : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc">Madhurwada </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-title">Property Type : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="img-sub-title">Reserve Price : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-title">EMD : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="img-sub-title">Last Date of Tender Submit : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-title">Date/Time of Auction : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="img-sub-title">AC Name and Contact Details : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-title">Auction Notice : </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="img-sub-desc"> abccccc </label>
+                </div>
+            </div>
+
+    </div>
+</div>
